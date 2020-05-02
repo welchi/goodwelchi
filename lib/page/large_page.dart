@@ -9,6 +9,7 @@ class LargePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Logo(),
+            Nav(),
           ],
         ),
       ),
