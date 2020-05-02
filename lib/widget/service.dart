@@ -4,9 +4,10 @@ class Service extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const <Widget>[
+      children: <Widget>[
         Text(
           'Service',
+          style: Theme.of(context).textTheme.headline4,
         ),
       ],
     );
