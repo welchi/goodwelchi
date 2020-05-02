@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:goodwelchi/widget/logo.dart';
+import 'package:goodwelchi/widget/widget.dart';
 
 class LargePage extends StatelessWidget {
   @override
