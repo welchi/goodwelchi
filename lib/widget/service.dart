@@ -23,7 +23,7 @@ class Service extends StatelessWidget {
 
   Widget getServiceContent() {
     return SizedBox(
-      width: 300,
+      width: 200,
       child: Column(
         children: <Widget>[
           const Text(
