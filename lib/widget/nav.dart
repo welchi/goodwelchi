@@ -4,9 +4,7 @@ class Nav extends StatelessWidget {
   List<NavButtonData> navButtons = [
     NavButtonData(
       title: 'Home',
-      onPressed: () {
-        print('on tapped');
-      },
+      onPressed: () {},
     ),
     NavButtonData(
       title: 'About',
@@ -24,6 +22,8 @@ class Nav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: navButtons
           .map(
             (buttonData) => Padding(
