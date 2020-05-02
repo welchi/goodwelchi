@@ -36,6 +36,7 @@ class Nav extends StatelessWidget {
                 },
                 child: Text(
                   buttonData.title,
+                  style: Theme.of(context).textTheme.subtitle1,
                 ),
               ),
             ),
