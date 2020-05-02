@@ -23,6 +23,8 @@ class TopPage extends StatelessWidget {
   static String routeName = '';
   @override
   Widget build(BuildContext context) {
-    return Text('Hello');
+    return const Scaffold(
+      body: Text('Hello'),
+    );
   }
 }
