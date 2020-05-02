@@ -13,6 +13,8 @@ class Service extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             getServiceContent(),
+            getServiceContent(),
+            getServiceContent(),
           ],
         )
       ],
