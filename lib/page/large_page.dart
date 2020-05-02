@@ -10,6 +10,7 @@ class LargePage extends StatelessWidget {
           children: <Widget>[
             Logo(),
             Nav(),
+            TopImage(),
           ],
         ),
       ),
