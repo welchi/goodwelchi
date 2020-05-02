@@ -6,3 +6,12 @@ class Nav extends StatelessWidget {
     return const Text('ナビゲーション');
   }
 }
+
+class NavButtonData {
+  const NavButtonData({
+    @required this.title,
+    @required this.onPressed,
+  });
+  final String title;
+  final Function onPressed;
+}
