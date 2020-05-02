@@ -9,6 +9,27 @@ class Service extends StatelessWidget {
           'Service',
           style: Theme.of(context).textTheme.headline4,
         ),
+        Row(
+          children: <Widget>[
+            getServiceContent(),
+          ],
+        )
+      ],
+    );
+  }
+
+  Widget getServiceContent() {
+    return Column(
+      children: <Widget>[
+        Text(
+          'Engineering',
+        ),
+        Icon(
+          Icons.developer_board,
+        ),
+        Text(
+          'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+        ),
       ],
     );
   }
