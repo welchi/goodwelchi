@@ -4,7 +4,9 @@ class Nav extends StatelessWidget {
   List<NavButtonData> navButtons = [
     NavButtonData(
       title: 'Home',
-      onPressed: () {},
+      onPressed: () {
+        print('on tapped');
+      },
     ),
     NavButtonData(
       title: 'About',
@@ -21,7 +23,25 @@ class Nav extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return const Text('ナビゲーション');
+    return Row(
+      children: navButtons
+          .map(
+            (buttonData) => Padding(
+              padding: const EdgeInsets.only(
+                left: 8,
+              ),
+              child: GestureDetector(
+                onTap: () {
+                  buttonData.onPressed();
+                },
+                child: Text(
+                  buttonData.title,
+                ),
+              ),
+            ),
+          )
+          .toList(),
+    );
   }
 }
 
