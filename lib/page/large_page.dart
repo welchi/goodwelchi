@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goodwelchi/widget/logo.dart';
 
 class LargePage extends StatelessWidget {
   @override
@@ -6,7 +7,9 @@ class LargePage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: <Widget>[],
+          children: <Widget>[
+            Logo(),
+          ],
         ),
       ),
     );
