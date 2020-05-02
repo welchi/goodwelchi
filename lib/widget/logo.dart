@@ -12,8 +12,12 @@ class Logo extends StatelessWidget {
             'assets/images/logo.png',
           ),
         ),
-        const Text(
+        const SizedBox(
+          width: 16,
+        ),
+        Text(
           'GoodWelchi',
+          style: Theme.of(context).textTheme.headline5,
         ),
       ],
     );
