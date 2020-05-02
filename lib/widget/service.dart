@@ -19,18 +19,22 @@ class Service extends StatelessWidget {
   }
 
   Widget getServiceContent() {
-    return Column(
-      children: <Widget>[
-        Text(
-          'Engineering',
-        ),
-        Icon(
-          Icons.developer_board,
-        ),
-        Text(
-          'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
-        ),
-      ],
+    return SizedBox(
+      width: 300,
+      child: Column(
+        children: <Widget>[
+          const Text(
+            'Engineering',
+          ),
+          Icon(
+            Icons.developer_board,
+            size: 36,
+          ),
+          const Text(
+            'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+          ),
+        ],
+      ),
     );
   }
 }
