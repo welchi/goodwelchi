@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:goodwelchi/util/responsive_layout.dart';
+import 'package:goodwelchi/page/page.dart';
+import 'package:goodwelchi/util/util.dart';
 
 void main() {
   runApp(
@@ -24,10 +25,10 @@ class TopPage extends StatelessWidget {
   static String routeName = '';
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: ResponsiveLayout(
-        largeWidget: Text('Large'),
-        smallWidget: Text('Small'),
+        largeWidget: LargePage(),
+        smallWidget: const Text('Small'),
       ),
     );
   }
