@@ -10,6 +10,7 @@ class Service extends StatelessWidget {
           style: Theme.of(context).textTheme.headline4,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             getServiceContent(),
           ],
