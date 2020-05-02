@@ -12,6 +12,7 @@ class LargePage extends StatelessWidget {
             Nav(),
             TopImage(),
             Service(),
+            Works(),
           ],
         ),
       ),
