@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ResponsiveLayout extends StatelessWidget {
   const ResponsiveLayout({
-    @required this.smallWidget,
+    this.smallWidget,
     @required this.largeWidget,
   });
   final Widget smallWidget;
@@ -11,8 +11,8 @@ class ResponsiveLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth > 800) {
-          return largeWidget;
+        if (constraints.maxWidth < 600) {
+          return smallWidget ?? largeWidget;
         }
         return largeWidget;
       },
