@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goodwelchi/util/responsive_layout.dart';
 
 void main() {
   runApp(
@@ -24,7 +25,10 @@ class TopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Text('Hello'),
+      body: ResponsiveLayout(
+        largeWidget: Text('Large'),
+        smallWidget: Text('Small'),
+      ),
     );
   }
 }
