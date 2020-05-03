@@ -35,6 +35,7 @@ class WorksGridView extends StatelessWidget {
                       works[index].title,
                     ),
                     content: Column(
+                      mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
                         Image.asset(
                           works[index].imgPath,
