@@ -10,8 +10,9 @@ class Service extends StatelessWidget {
           style: Theme.of(context).textTheme.headline4,
         ),
         Padding(
-          padding: const EdgeInsets.all(
-            16,
+          padding: const EdgeInsets.only(
+            top: 16,
+            bottom: 8,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
