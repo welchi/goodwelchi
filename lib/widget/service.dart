@@ -30,7 +30,7 @@ class _ServiceContent extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Text(
-            'Engineering',
+            'Development',
             style: Theme.of(context).textTheme.headline6,
           ),
           Icon(
