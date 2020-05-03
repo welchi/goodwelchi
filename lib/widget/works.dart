@@ -34,26 +34,28 @@ class WorksGridView extends StatelessWidget {
                     title: Text(
                       works[index].title,
                     ),
-                    content: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        Image.asset(
-                          works[index].imgPath,
-                        ),
-                        Text(
-                          works[index].description,
-                        ),
-                        InkWell(
-                          onTap: () {
-                            launch(
-                              works[index].url,
-                            );
-                          },
-                          child: Text(
-                            works[index].url,
+                    content: SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Image.asset(
+                            works[index].imgPath,
                           ),
-                        ),
-                      ],
+                          Text(
+                            works[index].description,
+                          ),
+                          InkWell(
+                            onTap: () {
+                              launch(
+                                works[index].url,
+                              );
+                            },
+                            child: Text(
+                              works[index].url,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },
