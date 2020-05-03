@@ -17,7 +17,7 @@ class Logo extends StatelessWidget {
         ),
         Text(
           'GoodWelchi',
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context).textTheme.headline3,
         ),
       ],
     );
