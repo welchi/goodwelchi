@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:goodwelchi/model/model.dart';
+import 'package:goodwelchi/page/about_page.dart';
+import 'package:goodwelchi/routes/routes.dart';
 import 'package:goodwelchi/widget/widget.dart';
 
 class LargePage extends StatelessWidget {
@@ -41,3 +44,26 @@ class LargePage extends StatelessWidget {
     );
   }
 }
+
+List<NavButtonData> navButtons = [
+  NavButtonData(
+    title: 'Home',
+    onPressed: () {},
+  ),
+  NavButtonData(
+    title: 'About',
+    onPressed: () {
+      navigatorKey.currentState.pushNamed(
+        AboutPage.routeName,
+      );
+    },
+  ),
+  NavButtonData(
+    title: 'Works',
+    onPressed: () {},
+  ),
+  NavButtonData(
+    title: 'Contact',
+    onPressed: () {},
+  ),
+];
