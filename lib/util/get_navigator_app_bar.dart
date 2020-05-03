@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goodwelchi/main.dart';
 import 'package:goodwelchi/model/model.dart';
 import 'package:goodwelchi/page/about_page.dart';
 import 'package:goodwelchi/routes/routes.dart';
@@ -42,7 +43,11 @@ PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
 List<NavButtonData> navButtons = [
   NavButtonData(
     title: 'Home',
-    onPressed: () {},
+    onPressed: () {
+      navigatorKey.currentState.pushNamed(
+        TopPage.routeName,
+      );
+    },
   ),
   NavButtonData(
     title: 'About',
