@@ -54,8 +54,8 @@ class _ServiceContent extends StatelessWidget {
             style: Theme.of(context).textTheme.headline6,
           ),
           SizedBox(
-            width: 180,
-            height: 120,
+            width: 90,
+            height: 60,
             child: Image.asset(
               assetPath,
             ),
