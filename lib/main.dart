@@ -10,10 +10,12 @@ void main() {
 }
 
 class GoodWelchi extends StatelessWidget {
+  GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'GoodWelchi',
+      navigatorKey: navigatorKey,
       initialRoute: TopPage.routeName,
       routes: {
         TopPage.routeName: (context) => TopPage(),
