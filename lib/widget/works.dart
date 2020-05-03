@@ -33,8 +33,15 @@ class WorksGridView extends StatelessWidget {
                     title: Text(
                       works[index].title,
                     ),
-                    content: Text(
-                      works[index].description,
+                    content: Column(
+                      children: <Widget>[
+                        Image.asset(
+                          works[index].imgPath,
+                        ),
+                        Text(
+                          works[index].description,
+                        ),
+                      ],
                     ),
                   );
                 },
