@@ -24,12 +24,16 @@ class AboutPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Column(
-                  children: const <Widget>[
-                    Text(
-                      '名前 : うぇるち',
-                    ),
-                  ],
+                Flexible(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'こんにちは！バーチャル美少女エンジニアの「うぇるち」です！',
+                        style: Theme.of(context).textTheme.headline5,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
