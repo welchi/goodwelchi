@@ -11,10 +11,22 @@ class Service extends StatelessWidget {
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            _ServiceContent(),
-            _ServiceContent(),
-            _ServiceContent(),
+          children: const <Widget>[
+            _ServiceContent(
+              title: 'Development',
+              assetPath: 'assets/images/development.png',
+              description: '',
+            ),
+            _ServiceContent(
+              title: 'Illustration',
+              assetPath: 'assets/images/illustration.png',
+              description: '',
+            ),
+            _ServiceContent(
+              title: 'Design',
+              assetPath: 'assets/images/design.png',
+              description: '',
+            ),
           ],
         )
       ],
@@ -23,6 +35,14 @@ class Service extends StatelessWidget {
 }
 
 class _ServiceContent extends StatelessWidget {
+  const _ServiceContent({
+    this.title,
+    this.assetPath,
+    this.description,
+  });
+  final String title;
+  final String assetPath;
+  final String description;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
