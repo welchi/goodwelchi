@@ -15,17 +15,17 @@ class Service extends StatelessWidget {
             _ServiceContent(
               title: 'Development',
               assetPath: 'assets/images/development.png',
-              description: '',
+              description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
             ),
             _ServiceContent(
               title: 'Illustration',
               assetPath: 'assets/images/illustration.png',
-              description: '',
+              description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
             ),
             _ServiceContent(
               title: 'Design',
               assetPath: 'assets/images/design.png',
-              description: '',
+              description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
             ),
           ],
         )
@@ -50,15 +50,18 @@ class _ServiceContent extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Text(
-            'Development',
+            title,
             style: Theme.of(context).textTheme.headline6,
           ),
-          Icon(
-            Icons.developer_board,
-            size: 56,
+          Image.asset(
+            assetPath,
           ),
-          const Text(
-            'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+//          Icon(
+//            Icons.developer_board,
+//            size: 56,
+//          ),
+          Text(
+            description,
           ),
         ],
       ),
