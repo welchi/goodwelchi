@@ -53,8 +53,12 @@ class _ServiceContent extends StatelessWidget {
             title,
             style: Theme.of(context).textTheme.headline6,
           ),
-          Image.asset(
-            assetPath,
+          SizedBox(
+            width: 180,
+            height: 120,
+            child: Image.asset(
+              assetPath,
+            ),
           ),
 //          Icon(
 //            Icons.developer_board,
