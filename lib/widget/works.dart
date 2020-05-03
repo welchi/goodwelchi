@@ -25,45 +25,47 @@ class WorksGridView extends StatelessWidget {
       ),
       delegate: SliverChildBuilderDelegate(
         (BuildContext context, int index) {
-          return InkWell(
-            onTap: () {
-              showDialog<void>(
-                context: context,
-                builder: (_) {
-                  return AlertDialog(
-                    title: Text(
-                      works[index].title,
-                    ),
-                    content: SingleChildScrollView(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Image.asset(
-                            works[index].imgPath,
-                          ),
-                          Text(
-                            works[index].description,
-                          ),
-                          InkWell(
-                            onTap: () {
-                              launch(
-                                works[index].url,
-                              );
-                            },
-                            child: Text(
-                              works[index].url,
-                            ),
-                          ),
-                        ],
+          return Padding(
+            padding: const EdgeInsets.all(
+              16,
+            ),
+            child: InkWell(
+              onTap: () {
+                showDialog<void>(
+                  context: context,
+                  builder: (_) {
+                    return AlertDialog(
+                      title: Text(
+                        works[index].title,
                       ),
-                    ),
-                  );
-                },
-              );
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(16),
+                      content: SingleChildScrollView(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Image.asset(
+                              works[index].imgPath,
+                            ),
+                            Text(
+                              works[index].description,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                launch(
+                                  works[index].url,
+                                );
+                              },
+                              child: Text(
+                                works[index].url,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
               child: Card(
                 child: SizedBox(
                   width: 200,
