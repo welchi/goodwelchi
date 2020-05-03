@@ -5,7 +5,6 @@ class TopImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        top: 16,
         bottom: 16,
       ),
       child: Image.asset(
