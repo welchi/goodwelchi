@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:goodwelchi/page/about_page.dart';
 import 'package:goodwelchi/page/page.dart';
+import 'package:goodwelchi/routes/routes.dart';
 import 'package:goodwelchi/util/util.dart';
 
 void main() {
@@ -10,7 +11,6 @@ void main() {
 }
 
 class GoodWelchi extends StatelessWidget {
-  GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
