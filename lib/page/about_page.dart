@@ -14,8 +14,10 @@ class AboutPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Center(
-              child: Image.asset(
-                'assets/images/welchi.png',
+              child: ClipOval(
+                child: Image.asset(
+                  'assets/images/welchi.png',
+                ),
               ),
             ),
           ],
