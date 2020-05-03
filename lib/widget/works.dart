@@ -27,13 +27,18 @@ class WorksGridView extends StatelessWidget {
           return InkWell(
             onTap: () {
               showDialog<void>(
-                  context: context,
-                  builder: (_) {
-                    return AlertDialog(
-                      title: Text('test'),
-                      content: Text('testtest'),
-                    );
-                  });
+                context: context,
+                builder: (_) {
+                  return AlertDialog(
+                    title: Text(
+                      works[index].title,
+                    ),
+                    content: Text(
+                      works[index].description,
+                    ),
+                  );
+                },
+              );
             },
             child: const Card(
               child: SizedBox(
@@ -43,7 +48,7 @@ class WorksGridView extends StatelessWidget {
             ),
           );
         },
-        childCount: 30,
+        childCount: works.length,
       ),
     );
   }
