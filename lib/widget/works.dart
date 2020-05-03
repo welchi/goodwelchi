@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goodwelchi/model/model.dart';
 
 class WorksTitle extends StatelessWidget {
   @override
@@ -47,3 +48,5 @@ class WorksGridView extends StatelessWidget {
     );
   }
 }
+
+List<WorkData> works = [];
