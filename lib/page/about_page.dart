@@ -9,10 +9,8 @@ class AboutPage extends StatelessWidget {
       appBar: getNavigatorAppBar(
         context,
       ),
-      body: Container(
-        child: const Text(
-          'Hello',
-        ),
+      body: Image.asset(
+        'assets/images/welchi.png',
       ),
     );
   }
