@@ -8,39 +8,7 @@ class LargePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: SizedBox(
-          height: 60,
-          width: 60,
-          child: Image.asset(
-            'assets/images/logo.png',
-          ),
-        ),
-        title: Text(
-          'GoodWelchi',
-          style: Theme.of(context).textTheme.headline3,
-        ),
-        actions: navButtons
-            .map(
-              (buttonData) => Center(
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 32,
-                  ),
-                  child: GestureDetector(
-                    onTap: () {
-                      buttonData.onPressed();
-                    },
-                    child: Text(
-                      buttonData.title,
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
-                ),
-              ),
-            )
-            .toList(),
-      ),
+      appBar: getAppBar(context),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverList(
@@ -63,6 +31,42 @@ class LargePage extends StatelessWidget {
       ),
     );
   }
+}
+
+PreferredSizeWidget getAppBar(BuildContext context) {
+  return AppBar(
+    leading: SizedBox(
+      height: 60,
+      width: 60,
+      child: Image.asset(
+        'assets/images/logo.png',
+      ),
+    ),
+    title: Text(
+      'GoodWelchi',
+      style: Theme.of(context).textTheme.headline3,
+    ),
+    actions: navButtons
+        .map(
+          (buttonData) => Center(
+            child: Padding(
+              padding: const EdgeInsets.only(
+                left: 32,
+              ),
+              child: GestureDetector(
+                onTap: () {
+                  buttonData.onPressed();
+                },
+                child: Text(
+                  buttonData.title,
+                  style: Theme.of(context).textTheme.subtitle1,
+                ),
+              ),
+            ),
+          ),
+        )
+        .toList(),
+  );
 }
 
 List<NavButtonData> navButtons = [
