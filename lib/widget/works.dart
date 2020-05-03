@@ -79,14 +79,20 @@ class WorksGridView extends StatelessWidget {
 
 List<WorkData> works = [
   const WorkData(
+    imgPath: 'assets/images/works_2DR.png',
+    title: '2DR',
+    description: 'スマホでアバターを操作できる「2DR」で、開発を担当しました。',
+    url: 'https://apps.apple.com/us/app/2dr/id1471949953?l=ja',
+  ),
+  const WorkData(
     imgPath: 'assets/images/works_namonaki.png',
-    title: 'Hug You Tight ジャケットイラスト',
-    description: 'バーチャル研究者なもなきさんが歌う「Hug You Tight」でジャケット絵を担当しました。',
+    title: '「Hug You Tight」ジャケットイラスト',
+    description: 'バーチャル研究者なもなきさんが歌う「Hug You Tight」で、ジャケット絵を担当しました。',
     url: 'https://www.youtube.com/watch?v=O3HJ9Ddjago',
   ),
   const WorkData(
     imgPath: 'assets/images/works_2DR_lp_top.png',
-    title: '2DR ランディングページ',
+    title: '「2DR」ランディングページ',
     description: 'スマホでアバターを操作できる「2DR」のランディングページです。開発・サイトデザイン・イメージイラストを担当しました。',
     url: 'https://2dr.info/',
   ),
