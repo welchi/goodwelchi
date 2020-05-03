@@ -15,6 +15,11 @@ class GoodWelchi extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'GoodWelchi',
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+        ),
+      ),
       navigatorKey: navigatorKey,
       initialRoute: TopPage.routeName,
       routes: {
