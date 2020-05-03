@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goodwelchi/model/model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class WorksTitle extends StatelessWidget {
   @override
@@ -40,6 +41,16 @@ class WorksGridView extends StatelessWidget {
                         ),
                         Text(
                           works[index].description,
+                        ),
+                        InkWell(
+                          onTap: () {
+                            launch(
+                              works[index].url,
+                            );
+                          },
+                          child: Text(
+                            works[index].url,
+                          ),
                         ),
                       ],
                     ),
