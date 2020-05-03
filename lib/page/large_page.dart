@@ -14,8 +14,6 @@ class LargePage extends StatelessWidget {
               [
                 Column(
                   children: <Widget>[
-                    Logo(),
-                    Nav(),
                     TopImage(),
                     Service(),
                     WorksTitle(),
