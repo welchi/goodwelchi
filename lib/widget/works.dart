@@ -37,6 +37,7 @@ class WorksGridView extends StatelessWidget {
                     content: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Image.asset(
                             works[index].imgPath,
