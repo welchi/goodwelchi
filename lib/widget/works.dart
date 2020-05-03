@@ -49,4 +49,11 @@ class WorksGridView extends StatelessWidget {
   }
 }
 
-List<WorkData> works = [];
+List<WorkData> works = [
+  const WorkData(
+    imgPath: 'assets/images/works_2DR_lp_top.png',
+    title: '2DR イメージイラスト',
+    description: 'スマホでアバターを操作できる「2DR」のイメージイラストです。',
+    url: 'https://2dr.info/',
+  ),
+];
