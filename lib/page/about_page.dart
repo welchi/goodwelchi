@@ -9,8 +9,17 @@ class AboutPage extends StatelessWidget {
       appBar: getNavigatorAppBar(
         context,
       ),
-      body: Image.asset(
-        'assets/images/welchi.png',
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Center(
+              child: Image.asset(
+                'assets/images/welchi.png',
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
