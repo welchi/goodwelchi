@@ -13,12 +13,25 @@ class AboutPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Center(
-              child: ClipOval(
-                child: Image.asset(
-                  'assets/images/welchi.png',
+            Row(
+              children: <Widget>[
+                SizedBox(
+                  width: 400,
+                  height: 400,
+                  child: ClipOval(
+                    child: Image.asset(
+                      'assets/images/welchi.png',
+                    ),
+                  ),
                 ),
-              ),
+                Column(
+                  children: const <Widget>[
+                    Text(
+                      '名前 : うぇるち',
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),
