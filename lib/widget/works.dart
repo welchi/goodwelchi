@@ -80,8 +80,14 @@ class WorksGridView extends StatelessWidget {
 List<WorkData> works = [
   const WorkData(
     imgPath: 'assets/images/works_2DR_lp_top.png',
-    title: '2DR イメージイラスト',
-    description: 'スマホでアバターを操作できる「2DR」のイメージイラストです。',
+    title: '2DR ランディングページ',
+    description: 'スマホでアバターを操作できる「2DR」のランディングページです。開発・サイトデザイン・イメージイラストを担当しました。',
+    url: 'https://2dr.info/',
+  ),
+  const WorkData(
+    imgPath: 'assets/images/works_2DR_lp_comic.png',
+    title: '2DR 操作説明コミック',
+    description: 'スマホでアバターを操作できる「2DR」を説明する漫画です。3ページ漫画で、ネーム・作画を担当しました。',
     url: 'https://2dr.info/',
   ),
 ];
