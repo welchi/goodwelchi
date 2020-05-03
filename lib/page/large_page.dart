@@ -20,6 +20,24 @@ class LargePage extends StatelessWidget {
           'GoodWelchi',
           style: Theme.of(context).textTheme.headline3,
         ),
+        actions: navButtons
+            .map(
+              (buttonData) => Padding(
+                padding: const EdgeInsets.only(
+                  left: 8,
+                ),
+                child: GestureDetector(
+                  onTap: () {
+                    buttonData.onPressed();
+                  },
+                  child: Text(
+                    buttonData.title,
+                    style: Theme.of(context).textTheme.subtitle1,
+                  ),
+                ),
+              ),
+            )
+            .toList(),
       ),
       body: CustomScrollView(
         slivers: <Widget>[
