@@ -5,16 +5,22 @@ class LargePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Logo(),
-            Nav(),
-            TopImage(),
-            Service(),
-            Works(),
-          ],
-        ),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverList(
+            delegate: SliverChildListDelegate([
+              Column(
+                children: <Widget>[
+                  Logo(),
+                  Nav(),
+                  TopImage(),
+                  Service(),
+                  Works(),
+                ],
+              ),
+            ]),
+          )
+        ],
       ),
     );
   }
