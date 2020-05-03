@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:goodwelchi/page/about_page.dart';
+import 'package:goodwelchi/routes/routes.dart';
 
 class Nav extends StatelessWidget {
   List<NavButtonData> navButtons = [
@@ -8,7 +10,11 @@ class Nav extends StatelessWidget {
     ),
     NavButtonData(
       title: 'About',
-      onPressed: () {},
+      onPressed: () {
+        navigatorKey.currentState.pushNamed(
+          AboutPage.routeName,
+        );
+      },
     ),
     NavButtonData(
       title: 'Works',
