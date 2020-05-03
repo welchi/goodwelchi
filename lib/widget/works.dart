@@ -21,9 +21,17 @@ class WorksGridView extends StatelessWidget {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
       ),
-      delegate: SliverChildBuilderDelegate((BuildContext context, int index) {
-        return Card();
-      }),
+      delegate: SliverChildBuilderDelegate(
+        (BuildContext context, int index) {
+          return Card(
+            child: SizedBox(
+              width: 200,
+              height: 200,
+            ),
+          );
+        },
+        childCount: 30,
+      ),
     );
   }
 }

@@ -8,18 +8,21 @@ class LargePage extends StatelessWidget {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverList(
-            delegate: SliverChildListDelegate([
-              Column(
-                children: <Widget>[
-                  Logo(),
-                  Nav(),
-                  TopImage(),
-                  Service(),
-                  WorksTitle(),
-                ],
-              ),
-            ]),
-          )
+            delegate: SliverChildListDelegate(
+              [
+                Column(
+                  children: <Widget>[
+                    Logo(),
+                    Nav(),
+                    TopImage(),
+                    Service(),
+                    WorksTitle(),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          WorksGridView(),
         ],
       ),
     );
