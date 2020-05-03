@@ -62,13 +62,16 @@ class WorksGridView extends StatelessWidget {
                 },
               );
             },
-            child: Card(
-              child: SizedBox(
-                width: 200,
-                height: 200,
-                child: Image.asset(
-                  works[index].imgPath,
-                  fit: BoxFit.cover,
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Card(
+                child: SizedBox(
+                  width: 200,
+                  height: 200,
+                  child: Image.asset(
+                    works[index].imgPath,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
