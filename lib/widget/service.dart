@@ -12,26 +12,30 @@ class Service extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            getServiceContent(),
-            getServiceContent(),
-            getServiceContent(),
+            _ServiceContent(),
+            _ServiceContent(),
+            _ServiceContent(),
           ],
         )
       ],
     );
   }
+}
 
-  Widget getServiceContent() {
+class _ServiceContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return SizedBox(
       width: 200,
       child: Column(
         children: <Widget>[
-          const Text(
+          Text(
             'Engineering',
+            style: Theme.of(context).textTheme.headline6,
           ),
           Icon(
             Icons.developer_board,
-            size: 36,
+            size: 56,
           ),
           const Text(
             'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
