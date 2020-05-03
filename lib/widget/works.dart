@@ -79,6 +79,12 @@ class WorksGridView extends StatelessWidget {
 
 List<WorkData> works = [
   const WorkData(
+    imgPath: 'assets/images/works_namonaki.png',
+    title: 'Hug You Tight ジャケットイラスト',
+    description: 'バーチャル研究者なもなきさんが歌う「Hug You Tight」でジャケット絵を担当しました。',
+    url: 'https://www.youtube.com/watch?v=O3HJ9Ddjago',
+  ),
+  const WorkData(
     imgPath: 'assets/images/works_2DR_lp_top.png',
     title: '2DR ランディングページ',
     description: 'スマホでアバターを操作できる「2DR」のランディングページです。開発・サイトデザイン・イメージイラストを担当しました。',
