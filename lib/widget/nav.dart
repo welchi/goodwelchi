@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goodwelchi/model/model.dart';
 import 'package:goodwelchi/page/about_page.dart';
 import 'package:goodwelchi/routes/routes.dart';
 
@@ -50,13 +51,4 @@ class Nav extends StatelessWidget {
           .toList(),
     );
   }
-}
-
-class NavButtonData {
-  const NavButtonData({
-    @required this.title,
-    @required this.onPressed,
-  });
-  final String title;
-  final Function onPressed;
 }
