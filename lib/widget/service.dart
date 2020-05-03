@@ -9,25 +9,30 @@ class Service extends StatelessWidget {
           'Service',
           style: Theme.of(context).textTheme.headline4,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: const <Widget>[
-            _ServiceContent(
-              title: 'Development',
-              assetPath: 'assets/images/development.png',
-              description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
-            ),
-            _ServiceContent(
-              title: 'Illustration',
-              assetPath: 'assets/images/illustration.png',
-              description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
-            ),
-            _ServiceContent(
-              title: 'Design',
-              assetPath: 'assets/images/design.png',
-              description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
-            ),
-          ],
+        Padding(
+          padding: const EdgeInsets.all(
+            16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: const <Widget>[
+              _ServiceContent(
+                title: 'Development',
+                assetPath: 'assets/images/development.png',
+                description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+              ),
+              _ServiceContent(
+                title: 'Illustration',
+                assetPath: 'assets/images/illustration.png',
+                description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+              ),
+              _ServiceContent(
+                title: 'Design',
+                assetPath: 'assets/images/design.png',
+                description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+              ),
+            ],
+          ),
         )
       ],
     );
