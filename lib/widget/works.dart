@@ -23,10 +23,22 @@ class WorksGridView extends StatelessWidget {
       ),
       delegate: SliverChildBuilderDelegate(
         (BuildContext context, int index) {
-          return Card(
-            child: SizedBox(
-              width: 200,
-              height: 200,
+          return InkWell(
+            onTap: () {
+              showDialog<void>(
+                  context: context,
+                  builder: (_) {
+                    return AlertDialog(
+                      title: Text('test'),
+                      content: Text('testtest'),
+                    );
+                  });
+            },
+            child: const Card(
+              child: SizedBox(
+                width: 200,
+                height: 200,
+              ),
             ),
           );
         },
