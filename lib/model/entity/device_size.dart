@@ -1,0 +1,4 @@
+enum DeviceSize {
+  pc,
+  mobile,
+}
