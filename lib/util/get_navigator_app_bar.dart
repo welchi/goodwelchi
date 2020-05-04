@@ -25,28 +25,65 @@ PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
       style: Theme.of(context).textTheme.headline2,
       maxLines: 1,
     ),
-    actions: ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile
-        ? null
-        : navButtons
-            .map(
-              (buttonData) => Center(
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 32,
-                  ),
-                  child: GestureDetector(
-                    onTap: () {
-                      buttonData.onPressed();
-                    },
-                    child: Text(
-                      buttonData.title,
-                      style: Theme.of(context).textTheme.subtitle1,
+//    actions: ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile
+//        ? null
+//        : navButtons
+//            .map(
+//              (buttonData) => Center(
+//                child: Padding(
+//                  padding: const EdgeInsets.only(
+//                    left: 32,
+//                  ),
+//                  child: GestureDetector(
+//                    onTap: () {
+//                      buttonData.onPressed();
+//                    },
+//                    child: Text(
+//                      buttonData.title,
+//                      style: Theme.of(context).textTheme.subtitle1,
+//                    ),
+//                  ),
+//                ),
+//              ),
+//            )
+//            .toList(),
+    bottom: PreferredSize(
+      preferredSize: const Size.fromHeight(
+        48,
+      ),
+      child: Theme(
+        data: Theme.of(context).copyWith(
+          accentColor: Colors.white,
+        ),
+        child: Container(
+          height: 48,
+          alignment: Alignment.centerRight,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: navButtons
+                .map(
+                  (buttonData) => Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 32,
+                      ),
+                      child: GestureDetector(
+                        onTap: () {
+                          buttonData.onPressed();
+                        },
+                        child: Text(
+                          buttonData.title,
+                          style: Theme.of(context).textTheme.subtitle1,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-            )
-            .toList(),
+                )
+                .toList(),
+          ),
+        ),
+      ),
+    ),
   );
 }
 
