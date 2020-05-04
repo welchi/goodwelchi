@@ -15,17 +15,24 @@ class Service extends StatelessWidget {
           'Service',
           style: Theme.of(context).textTheme.headline4,
         ),
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 16,
-            bottom: 8,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: _serviceContents,
-          ),
-        )
+        getContents(),
       ],
+    );
+  }
+
+  Widget getContents() {
+    if (deviceSize == DeviceSize.mobile) {
+      return const Text('small');
+    }
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: 16,
+        bottom: 8,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: _serviceContents,
+      ),
     );
   }
 }
