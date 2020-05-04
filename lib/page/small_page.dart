@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goodwelchi/model/entity/device_size.dart';
 import 'package:goodwelchi/util/util.dart';
 import 'package:goodwelchi/widget/widget.dart';
 
@@ -15,7 +16,9 @@ class SmallPage extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     TopImage(),
-                    Service(),
+                    const Service(
+                      deviceSize: DeviceSize.mobile,
+                    ),
                     WorksTitle(),
                   ],
                 ),

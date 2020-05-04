@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goodwelchi/model/model.dart';
 import 'package:goodwelchi/util/util.dart';
 import 'package:goodwelchi/widget/widget.dart';
 
@@ -15,7 +16,9 @@ class LargePage extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     TopImage(),
-                    Service(),
+                    const Service(
+                      deviceSize: DeviceSize.pc,
+                    ),
                     WorksTitle(),
                   ],
                 ),

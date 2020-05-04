@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:goodwelchi/model/model.dart';
 
 class Service extends StatelessWidget {
+  const Service({
+    @required this.deviceSize,
+  });
+  final DeviceSize deviceSize;
   @override
   Widget build(BuildContext context) {
     return Column(
