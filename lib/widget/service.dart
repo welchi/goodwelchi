@@ -42,18 +42,36 @@ class Service extends StatelessWidget {
             .toList(),
       );
     }
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: _serviceContents
-          .map(
-            (service) => _ServiceContent(
-              title: service.title,
-              assetPath: service.assetPath,
-              description: service.description,
-              width: 200,
-            ),
-          )
-          .toList(),
+    return Column(
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: _serviceContents
+              .map(
+                (service) => _ServiceContent(
+                  title: service.title,
+                  assetPath: service.assetPath,
+                  description: service.description,
+                  width: 200,
+                ),
+              )
+              .toList(),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: _serviceContents
+              .map(
+                (service) => SizedBox(
+                  width: MediaQuery.of(context).size.width / 4,
+                  child: Text(
+                    service.description,
+                    style: Theme.of(context).textTheme.subtitle1,
+                  ),
+                ),
+              )
+              .toList(),
+        ),
+      ],
     );
   }
 }
@@ -89,10 +107,10 @@ class _ServiceContent extends StatelessWidget {
               ),
             ),
           ),
-          Text(
-            description,
-            style: Theme.of(context).textTheme.subtitle1,
-          ),
+//          Text(
+//            description,
+//            style: Theme.of(context).textTheme.subtitle1,
+//          ),
         ],
       ),
     );
