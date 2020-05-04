@@ -15,24 +15,26 @@ class Service extends StatelessWidget {
           'Service',
           style: Theme.of(context).textTheme.headline4,
         ),
-        getContents(),
+        Padding(
+          padding: const EdgeInsets.only(
+            top: 16,
+            bottom: 8,
+          ),
+          child: getContents(),
+        ),
       ],
     );
   }
 
   Widget getContents() {
     if (deviceSize == DeviceSize.mobile) {
-      return const Text('small');
-    }
-    return Padding(
-      padding: const EdgeInsets.only(
-        top: 16,
-        bottom: 8,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      return Column(
         children: _serviceContents,
-      ),
+      );
+    }
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: _serviceContents,
     );
   }
 }
