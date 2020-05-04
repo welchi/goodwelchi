@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:goodwelchi/main.dart';
 import 'package:goodwelchi/model/model.dart';
@@ -15,9 +16,10 @@ PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
         'assets/images/logo.png',
       ),
     ),
-    title: Text(
+    title: AutoSizeText(
       'GoodWelchi',
       style: Theme.of(context).textTheme.headline3,
+      maxLines: 1,
     ),
     actions: navButtons
         .map(
