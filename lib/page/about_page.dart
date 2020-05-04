@@ -61,6 +61,50 @@ class AboutPage extends StatelessWidget {
     );
   }
 
+  Widget getSmallAboutPage(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            children: <Widget>[
+              getWelchiImage(),
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: Bubble(
+                        padding: const BubbleEdges.all(
+                          8,
+                        ),
+                        radius: const Radius.circular(
+                          20,
+                        ),
+                        nip: BubbleNip.leftBottom,
+                        color: const Color(
+                          0xFFB0F2DA,
+                        ),
+                        child: getWelchiMessage(
+                          context,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: getWelchiAbout(context),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget getWelchiImage() {
     return SizedBox(
       width: 400,
