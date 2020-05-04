@@ -29,12 +29,12 @@ class Service extends StatelessWidget {
   Widget getContents() {
     if (deviceSize == DeviceSize.mobile) {
       return Column(
-        children: _serviceContents,
+        children: const [],
       );
     }
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: _serviceContents,
+      children: const [],
     );
   }
 }
@@ -79,18 +79,18 @@ class _ServiceContent extends StatelessWidget {
   }
 }
 
-List<Widget> _serviceContents = const [
-  _ServiceContent(
+List<ServiceContentData> _serviceContents = const [
+  ServiceContentData(
     title: 'Development',
     assetPath: 'assets/images/development.png',
     description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
   ),
-  _ServiceContent(
+  ServiceContentData(
     title: 'Illustration',
     assetPath: 'assets/images/illustration.png',
     description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
   ),
-  _ServiceContent(
+  ServiceContentData(
     title: 'Design',
     assetPath: 'assets/images/design.png',
     description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
