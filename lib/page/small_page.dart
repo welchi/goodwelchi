@@ -8,6 +8,7 @@ class SmallPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: getNavigatorAppBar(context),
+      endDrawer: getNavigatorDrawer(context),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverList(

@@ -10,6 +10,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
   return AppBar(
+    iconTheme: IconThemeData(
+      color: Colors.black,
+    ),
     leading: SizedBox(
       height: 60,
       width: 60,
@@ -45,6 +48,28 @@ PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
             )
             .toList(),
   );
+}
+
+Widget getNavigatorDrawer(BuildContext context) {
+  if (ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile) {
+    return Drawer(
+      child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: navButtons
+              .map(
+                (navButton) => ListTile(
+                  title: Text(
+                    navButton.title,
+                  ),
+                  onTap: () {
+                    navButton.onPressed();
+                  },
+                ),
+              )
+              .toList()),
+    );
+  }
+  return null;
 }
 
 List<NavButtonData> navButtons = [
