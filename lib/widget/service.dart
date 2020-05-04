@@ -67,11 +67,11 @@ class _ServiceContent extends StatelessWidget {
   final String title;
   final String assetPath;
   final String description;
-  final int width;
+  final double width;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 200,
+      width: width,
       child: Column(
         children: <Widget>[
           Text(
