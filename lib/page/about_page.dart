@@ -34,15 +34,7 @@ class AboutPage extends StatelessWidget {
     return [
       Row(
         children: <Widget>[
-          SizedBox(
-            width: 400,
-            height: 400,
-            child: ClipOval(
-              child: Image.asset(
-                'assets/images/welchi.png',
-              ),
-            ),
-          ),
+          getWelchiImage(),
           Flexible(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,5 +75,17 @@ class AboutPage extends StatelessWidget {
         ],
       ),
     ];
+  }
+
+  Widget getWelchiImage() {
+    return SizedBox(
+      width: 400,
+      height: 400,
+      child: ClipOval(
+        child: Image.asset(
+          'assets/images/welchi.png',
+        ),
+      ),
+    );
   }
 }
