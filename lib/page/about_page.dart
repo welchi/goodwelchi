@@ -1,6 +1,5 @@
 import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
-import 'package:goodwelchi/model/entity/entity.dart';
 import 'package:goodwelchi/util/util.dart';
 
 class AboutPage extends StatelessWidget {
@@ -8,65 +7,58 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: getNavigatorAppBar(
-        context,
-      ),
-      endDrawer: getNavigatorDrawer(context),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: getAbout(context),
+        appBar: getNavigatorAppBar(
+          context,
         ),
-      ),
-    );
+        endDrawer: getNavigatorDrawer(context),
+        body: ResponsiveLayout(
+          largeWidget: getLargeAboutPage(context),
+          smallWidget: getLargeAboutPage(context),
+        ));
   }
 
-  List<Widget> getAbout(BuildContext context) {
-    if (ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile) {
-      return [
-        Text('small'),
-      ];
-    }
-    return getLargeAbout(context);
-  }
-
-  List<Widget> getLargeAbout(BuildContext context) {
-    return [
-      Row(
-        children: <Widget>[
-          getWelchiImage(),
-          Flexible(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: Bubble(
-                    padding: const BubbleEdges.all(
-                      8,
+  Widget getLargeAboutPage(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            children: <Widget>[
+              getWelchiImage(),
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: Bubble(
+                        padding: const BubbleEdges.all(
+                          8,
+                        ),
+                        radius: const Radius.circular(
+                          20,
+                        ),
+                        nip: BubbleNip.leftBottom,
+                        color: const Color(
+                          0xFFB0F2DA,
+                        ),
+                        child: getWelchiMessage(
+                          context,
+                        ),
+                      ),
                     ),
-                    radius: const Radius.circular(
-                      20,
+                    Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: getWelchiAbout(context),
                     ),
-                    nip: BubbleNip.leftBottom,
-                    color: const Color(
-                      0xFFB0F2DA,
-                    ),
-                    child: getWelchiMessage(
-                      context,
-                    ),
-                  ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: getWelchiAbout(context),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
-    ];
+    );
   }
 
   Widget getWelchiImage() {
