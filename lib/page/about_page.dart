@@ -65,20 +65,6 @@ class AboutPage extends StatelessWidget {
                 ),
               ],
             ),
-            Text(
-              'bio',
-              style: Theme.of(context).textTheme.headline6.copyWith(
-                    decoration: TextDecoration.underline,
-                  ),
-            ),
-            Text(
-              '2016  機械学習ベンチャー ソフトウェアエンジニア',
-              style: Theme.of(context).textTheme.subtitle1,
-            ),
-            Text(
-              '2018- フリーランス',
-              style: Theme.of(context).textTheme.subtitle1,
-            ),
           ],
         ),
       ),
