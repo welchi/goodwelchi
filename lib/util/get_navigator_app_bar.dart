@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:goodwelchi/main.dart';
 import 'package:goodwelchi/model/model.dart';
 import 'package:goodwelchi/page/about_page.dart';
+import 'package:goodwelchi/page/works_page.dart';
 import 'package:goodwelchi/routes/routes.dart';
 
 PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
@@ -59,7 +60,11 @@ List<NavButtonData> navButtons = [
   ),
   NavButtonData(
     title: 'Works',
-    onPressed: () {},
+    onPressed: () {
+      navigatorKey.currentState.pushNamed(
+        WorksPage.routeName,
+      );
+    },
   ),
   NavButtonData(
     title: 'Contact',
