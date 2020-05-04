@@ -4,28 +4,6 @@ import 'package:goodwelchi/page/about_page.dart';
 import 'package:goodwelchi/routes/routes.dart';
 
 class Nav extends StatelessWidget {
-  List<NavButtonData> navButtons = [
-    NavButtonData(
-      title: 'Home',
-      onPressed: () {},
-    ),
-    NavButtonData(
-      title: 'About',
-      onPressed: () {
-        navigatorKey.currentState.pushNamed(
-          AboutPage.routeName,
-        );
-      },
-    ),
-    NavButtonData(
-      title: 'Works',
-      onPressed: () {},
-    ),
-    NavButtonData(
-      title: 'Contact',
-      onPressed: () {},
-    ),
-  ];
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -52,3 +30,26 @@ class Nav extends StatelessWidget {
     );
   }
 }
+
+List<NavButtonData> navButtons = [
+  NavButtonData(
+    title: 'Home',
+    onPressed: () {},
+  ),
+  NavButtonData(
+    title: 'About',
+    onPressed: () {
+      navigatorKey.currentState.pushNamed(
+        AboutPage.routeName,
+      );
+    },
+  ),
+  NavButtonData(
+    title: 'Works',
+    onPressed: () {},
+  ),
+  NavButtonData(
+    title: 'Contact',
+    onPressed: () {},
+  ),
+];
