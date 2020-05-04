@@ -26,20 +26,16 @@ PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
       maxLines: 1,
     ),
     actions: links
-        .map((link) => InkWell(
-              onTap: () {
-                launch(
-                  link.url,
-                );
-              },
-              child: SizedBox(
-                width: 32,
-                height: 32,
-                child: Image.asset(
-                  link.assetPath,
-                ),
-              ),
-            ))
+        .map(
+          (link) => IconButton(
+            icon: Image.asset(
+              link.assetPath,
+            ),
+            onPressed: () => launch(
+              link.url,
+            ),
+          ),
+        )
         .toList(),
 //    actions: ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile
 //        ? null
@@ -165,5 +161,13 @@ List<ExternalLinkData> links = [
   ExternalLinkData(
     assetPath: 'assets/images/Twitter_Logo_Blue.png',
     url: 'https://twitter.com/welchi_',
+  ),
+  ExternalLinkData(
+    assetPath: 'assets/images/GitHub-Mark-120px-plus.png',
+    url: 'https://github.com/welchi',
+  ),
+  ExternalLinkData(
+    assetPath: 'assets/images/logo_symbol.png',
+    url: 'https://note.com/welchi',
   ),
 ];
