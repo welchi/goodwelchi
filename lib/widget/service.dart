@@ -91,6 +91,7 @@ class _ServiceContent extends StatelessWidget {
           ),
           Text(
             description,
+            style: Theme.of(context).textTheme.subtitle1,
           ),
         ],
       ),
