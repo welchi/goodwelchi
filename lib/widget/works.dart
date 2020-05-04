@@ -23,17 +23,20 @@ class WorksGridView extends StatelessWidget {
   final DeviceSize deviceSize;
   @override
   Widget build(BuildContext context) {
-    return SliverGrid(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: getCrossAxisCount(),
+    return SliverPadding(
+      padding: EdgeInsets.only(
+        left: 8,
+        right: 8,
       ),
-      delegate: SliverChildBuilderDelegate(
-        (BuildContext context, int index) {
-          return Padding(
-            padding: const EdgeInsets.all(
-              16,
-            ),
-            child: InkWell(
+      sliver: SliverGrid(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: getCrossAxisCount(),
+          crossAxisSpacing: 32,
+          mainAxisSpacing: 64,
+        ),
+        delegate: SliverChildBuilderDelegate(
+          (BuildContext context, int index) {
+            return InkWell(
               onTap: () {
                 showGridDetail(works[index], context);
               },
@@ -47,10 +50,10 @@ class WorksGridView extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-          );
-        },
-        childCount: works.length,
+            );
+          },
+          childCount: works.length,
+        ),
       ),
     );
   }
