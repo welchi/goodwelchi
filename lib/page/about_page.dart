@@ -1,4 +1,3 @@
-import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:goodwelchi/util/util.dart';
 
@@ -13,7 +12,7 @@ class AboutPage extends StatelessWidget {
         endDrawer: getNavigatorDrawer(context),
         body: ResponsiveLayout(
           largeWidget: getLargeAboutPage(context),
-          smallWidget: getLargeAboutPage(context),
+          smallWidget: getSmallAboutPage(context),
         ));
   }
 
@@ -31,20 +30,8 @@ class AboutPage extends StatelessWidget {
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.all(8),
-                      child: Bubble(
-                        padding: const BubbleEdges.all(
-                          8,
-                        ),
-                        radius: const Radius.circular(
-                          20,
-                        ),
-                        nip: BubbleNip.leftBottom,
-                        color: const Color(
-                          0xFFB0F2DA,
-                        ),
-                        child: getWelchiMessage(
-                          context,
-                        ),
+                      child: getWelchiMessage(
+                        context,
                       ),
                     ),
                     Padding(
@@ -66,39 +53,16 @@ class AboutPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            children: <Widget>[
-              getWelchiImage(),
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: Bubble(
-                        padding: const BubbleEdges.all(
-                          8,
-                        ),
-                        radius: const Radius.circular(
-                          20,
-                        ),
-                        nip: BubbleNip.leftBottom,
-                        color: const Color(
-                          0xFFB0F2DA,
-                        ),
-                        child: getWelchiMessage(
-                          context,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: getWelchiAbout(context),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+          getWelchiImage(),
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: getWelchiMessage(
+              context,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: getWelchiAbout(context),
           ),
         ],
       ),
