@@ -25,7 +25,9 @@ class LargePage extends StatelessWidget {
               ],
             ),
           ),
-          WorksGridView(),
+          const WorksGridView(
+            deviceSize: DeviceSize.pc,
+          ),
         ],
       ),
     );

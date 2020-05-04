@@ -25,7 +25,9 @@ class SmallPage extends StatelessWidget {
               ],
             ),
           ),
-          WorksGridView(),
+          const WorksGridView(
+            deviceSize: DeviceSize.mobile,
+          ),
         ],
       ),
     );

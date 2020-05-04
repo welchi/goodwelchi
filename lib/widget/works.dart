@@ -17,6 +17,10 @@ class WorksTitle extends StatelessWidget {
 }
 
 class WorksGridView extends StatelessWidget {
+  const WorksGridView({
+    @required this.deviceSize,
+  });
+  final DeviceSize deviceSize;
   @override
   Widget build(BuildContext context) {
     return SliverGrid(
