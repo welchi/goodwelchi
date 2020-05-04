@@ -5,9 +5,13 @@ import 'package:goodwelchi/model/model.dart';
 import 'package:goodwelchi/page/about_page.dart';
 import 'package:goodwelchi/page/works_page.dart';
 import 'package:goodwelchi/routes/routes.dart';
+import 'package:goodwelchi/util/util.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
+  if (ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile) {
+    return AppBar();
+  }
   return getTextNavigatorBar(context);
 }
 
