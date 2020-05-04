@@ -52,9 +52,8 @@ class AboutPage extends StatelessWidget {
                     color: const Color(
                       0xFFB0F2DA,
                     ),
-                    child: Text(
-                      'こんにちは！バーチャル美少女エンジニアの「うぇるち」です！',
-                      style: Theme.of(context).textTheme.headline5,
+                    child: getWelchiMessage(
+                      context,
                     ),
                   ),
                 ),
@@ -86,6 +85,13 @@ class AboutPage extends StatelessWidget {
           'assets/images/welchi.png',
         ),
       ),
+    );
+  }
+
+  Widget getWelchiMessage(BuildContext context) {
+    return Text(
+      'こんにちは！バーチャル美少女エンジニアの「うぇるち」です！',
+      style: Theme.of(context).textTheme.headline5,
     );
   }
 }
