@@ -13,7 +13,7 @@ class Service extends StatelessWidget {
       children: <Widget>[
         Text(
           'Service',
-          style: Theme.of(context).textTheme.headline4,
+          style: Theme.of(context).textTheme.headline2,
         ),
         Padding(
           padding: const EdgeInsets.only(

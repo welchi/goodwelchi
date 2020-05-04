@@ -9,7 +9,7 @@ class WorksTitle extends StatelessWidget {
       children: <Widget>[
         Text(
           'Works',
-          style: Theme.of(context).textTheme.headline4,
+          style: Theme.of(context).textTheme.headline2,
         ),
       ],
     );
@@ -24,7 +24,7 @@ class WorksGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverPadding(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         left: 8,
         right: 8,
       ),
