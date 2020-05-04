@@ -18,7 +18,7 @@ PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
     ),
     title: AutoSizeText(
       'GoodWelchi',
-      style: Theme.of(context).textTheme.headline3,
+      style: Theme.of(context).textTheme.headline2,
       maxLines: 1,
     ),
     actions: navButtons
