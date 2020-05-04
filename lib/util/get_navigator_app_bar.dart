@@ -8,6 +8,12 @@ import 'package:goodwelchi/routes/routes.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
+  return getTextNavigatorBar(context);
+}
+
+PreferredSizeWidget getTextNavigatorBar(
+  BuildContext context,
+) {
   return AppBar(
     leading: SizedBox(
       height: 60,

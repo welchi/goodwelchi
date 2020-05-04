@@ -34,12 +34,9 @@ class TopPage extends StatelessWidget {
   static String routeName = '';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-//      body: LargePage(),
-      body: ResponsiveLayout(
-        largeWidget: LargePage(),
-        smallWidget: SmallPage(),
-      ),
+    return ResponsiveLayout(
+      largeWidget: LargePage(),
+      smallWidget: SmallPage(),
     );
   }
 }
