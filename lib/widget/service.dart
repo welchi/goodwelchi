@@ -29,7 +29,16 @@ class Service extends StatelessWidget {
   Widget getContents() {
     if (deviceSize == DeviceSize.mobile) {
       return Column(
-        children: const [],
+        children: _serviceContents
+            .map(
+              (service) => _ServiceContent(
+                title: service.title,
+                assetPath: service.assetPath,
+                description: service.description,
+                width: 320,
+              ),
+            )
+            .toList(),
       );
     }
     return Row(
