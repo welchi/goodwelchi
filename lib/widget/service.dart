@@ -20,13 +20,14 @@ class Service extends StatelessWidget {
             top: 16,
             bottom: 8,
           ),
-          child: getContents(),
+          child: getContents(context),
         ),
       ],
     );
   }
 
-  Widget getContents() {
+  Widget getContents(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     if (deviceSize == DeviceSize.mobile) {
       return Column(
         children: _serviceContents
@@ -35,7 +36,7 @@ class Service extends StatelessWidget {
                 title: service.title,
                 assetPath: service.assetPath,
                 description: service.description,
-                width: 320,
+                width: size.width,
               ),
             )
             .toList(),
