@@ -82,8 +82,8 @@ class _ServiceContent extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8),
             child: SizedBox(
-              width: 90,
-              height: 60,
+              width: 120,
+              height: 90,
               child: Image.asset(
                 assetPath,
               ),
