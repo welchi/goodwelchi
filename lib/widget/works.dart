@@ -24,8 +24,8 @@ class WorksGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverGrid(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: getCrossAxisCount(),
       ),
       delegate: SliverChildBuilderDelegate(
         (BuildContext context, int index) {
@@ -53,6 +53,13 @@ class WorksGridView extends StatelessWidget {
         childCount: works.length,
       ),
     );
+  }
+
+  int getCrossAxisCount() {
+    if (deviceSize == DeviceSize.mobile) {
+      return 1;
+    }
+    return 3;
   }
 }
 
