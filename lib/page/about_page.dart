@@ -15,7 +15,7 @@ class AboutPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: getLargeAbout(context),
+          children: getAbout(context),
         ),
       ),
     );
@@ -23,7 +23,9 @@ class AboutPage extends StatelessWidget {
 
   List<Widget> getAbout(BuildContext context) {
     if (ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile) {
-      return getLargeAbout(context);
+      return [
+        Text('small'),
+      ];
     }
     return getLargeAbout(context);
   }
@@ -60,7 +62,7 @@ class AboutPage extends StatelessWidget {
                     ),
                     child: Text(
                       'こんにちは！バーチャル美少女エンジニアの「うぇるち」です！',
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline5,
                     ),
                   ),
                 ),
