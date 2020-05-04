@@ -41,13 +41,15 @@ class Service extends StatelessWidget {
 
 class _ServiceContent extends StatelessWidget {
   const _ServiceContent({
-    this.title,
-    this.assetPath,
-    this.description,
+    @required this.title,
+    @required this.assetPath,
+    @required this.description,
+    @required this.width,
   });
   final String title;
   final String assetPath;
   final String description;
+  final int width;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -68,10 +70,6 @@ class _ServiceContent extends StatelessWidget {
               ),
             ),
           ),
-//          Icon(
-//            Icons.developer_board,
-//            size: 56,
-//          ),
           Text(
             description,
           ),
