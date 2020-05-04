@@ -1,3 +1,4 @@
+import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:goodwelchi/util/util.dart';
 
@@ -29,9 +30,15 @@ class AboutPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(
-                        'こんにちは！バーチャル美少女エンジニアの「うぇるち」です！',
-                        style: Theme.of(context).textTheme.headline5,
+                      Bubble(
+                        nip: BubbleNip.leftBottom,
+                        color: const Color(
+                          0xFFB0F2DA,
+                        ),
+                        child: Text(
+                          'こんにちは！バーチャル美少女エンジニアの「うぇるち」です！',
+                          style: Theme.of(context).textTheme.headline5,
+                        ),
                       ),
                       const Text(
                         'アバターのままフリーランスに挑戦中です。 '
