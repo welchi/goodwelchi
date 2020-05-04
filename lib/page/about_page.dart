@@ -59,14 +59,7 @@ class AboutPage extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8),
-                  child: Text(
-                    'アバターのままフリーランスに挑戦中です。 '
-                    '企画・開発・運用まで、手広く対応しています。'
-                    'iOS・Androidクロスプラットフォーム開発から、'
-                    'Unityを使ったゲーム関連開発まで、幅広い分野を扱っています。'
-                    '漫画家「吉野ホダカ」と提携しており、イラスト・漫画・デザイン全般も対応可能です。',
-                    style: Theme.of(context).textTheme.subtitle1,
-                  ),
+                  child: getWelchiAbout(context),
                 ),
               ],
             ),
@@ -92,6 +85,17 @@ class AboutPage extends StatelessWidget {
     return Text(
       'こんにちは！バーチャル美少女エンジニアの「うぇるち」です！',
       style: Theme.of(context).textTheme.headline5,
+    );
+  }
+
+  Widget getWelchiAbout(BuildContext context) {
+    return Text(
+      'アバターのままフリーランスに挑戦中です。 '
+      '企画・開発・運用まで、手広く対応しています。'
+      'iOS・Androidクロスプラットフォーム開発から、'
+      'Unityを使ったゲーム関連開発まで、幅広い分野を扱っています。'
+      '漫画家「吉野ホダカ」と提携しており、イラスト・漫画・デザイン全般も対応可能です。',
+      style: Theme.of(context).textTheme.subtitle1,
     );
   }
 }
