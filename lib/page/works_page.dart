@@ -20,6 +20,10 @@ class WorksPage extends StatelessWidget {
                     child: SizedBox(
                       width: 200,
                       height: 200,
+                      child: Image.asset(
+                        work.imgPath,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
