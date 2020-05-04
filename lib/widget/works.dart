@@ -31,40 +31,7 @@ class WorksGridView extends StatelessWidget {
             ),
             child: InkWell(
               onTap: () {
-                showDialog<void>(
-                  context: context,
-                  builder: (_) {
-                    return AlertDialog(
-                      title: Text(
-                        works[index].title,
-                      ),
-                      content: SingleChildScrollView(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Image.asset(
-                              works[index].imgPath,
-                            ),
-                            Text(
-                              works[index].description,
-                            ),
-                            InkWell(
-                              onTap: () {
-                                launch(
-                                  works[index].url,
-                                );
-                              },
-                              child: Text(
-                                works[index].url,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  },
-                );
+                showGridDetail(works[index], context);
               },
               child: Card(
                 child: SizedBox(
@@ -83,6 +50,46 @@ class WorksGridView extends StatelessWidget {
       ),
     );
   }
+}
+
+void showGridDetail(
+  WorkData work,
+  BuildContext context,
+) {
+  showDialog<void>(
+    context: context,
+    builder: (_) {
+      return AlertDialog(
+        title: Text(
+          work.title,
+        ),
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Image.asset(
+                work.imgPath,
+              ),
+              Text(
+                work.description,
+              ),
+              InkWell(
+                onTap: () {
+                  launch(
+                    work.url,
+                  );
+                },
+                child: Text(
+                  work.url,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
 }
 
 List<WorkData> works = [
