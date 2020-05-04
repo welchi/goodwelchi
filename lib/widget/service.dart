@@ -6,6 +6,7 @@ class Service extends StatelessWidget {
     @required this.deviceSize,
   });
   final DeviceSize deviceSize;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,23 +22,7 @@ class Service extends StatelessWidget {
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const <Widget>[
-              _ServiceContent(
-                title: 'Development',
-                assetPath: 'assets/images/development.png',
-                description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
-              ),
-              _ServiceContent(
-                title: 'Illustration',
-                assetPath: 'assets/images/illustration.png',
-                description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
-              ),
-              _ServiceContent(
-                title: 'Design',
-                assetPath: 'assets/images/design.png',
-                description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
-              ),
-            ],
+            children: _serviceContents,
           ),
         )
       ],
@@ -86,3 +71,21 @@ class _ServiceContent extends StatelessWidget {
     );
   }
 }
+
+List<Widget> _serviceContents = const [
+  _ServiceContent(
+    title: 'Development',
+    assetPath: 'assets/images/development.png',
+    description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+  ),
+  _ServiceContent(
+    title: 'Illustration',
+    assetPath: 'assets/images/illustration.png',
+    description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+  ),
+  _ServiceContent(
+    title: 'Design',
+    assetPath: 'assets/images/design.png',
+    description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+  ),
+];
