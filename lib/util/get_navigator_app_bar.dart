@@ -25,6 +25,22 @@ PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
       style: Theme.of(context).textTheme.headline2,
       maxLines: 1,
     ),
+    actions: links
+        .map((link) => InkWell(
+              onTap: () {
+                launch(
+                  link.url,
+                );
+              },
+              child: SizedBox(
+                width: 32,
+                height: 32,
+                child: Image.asset(
+                  link.assetPath,
+                ),
+              ),
+            ))
+        .toList(),
 //    actions: ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile
 //        ? null
 //        : navButtons
