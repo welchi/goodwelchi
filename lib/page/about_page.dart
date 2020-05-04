@@ -9,6 +9,7 @@ class AboutPage extends StatelessWidget {
       appBar: getNavigatorAppBar(
         context,
       ),
+      endDrawer: getNavigatorDrawer(context),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
