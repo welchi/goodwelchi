@@ -91,19 +91,20 @@ Widget getNavigatorDrawer(BuildContext context) {
   if (ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile) {
     return Drawer(
       child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: navButtons
-              .map(
-                (navButton) => ListTile(
-                  title: Text(
-                    navButton.title,
-                  ),
-                  onTap: () {
-                    navButton.onPressed();
-                  },
+        mainAxisSize: MainAxisSize.min,
+        children: navButtons
+            .map(
+              (navButton) => ListTile(
+                title: Text(
+                  navButton.title,
                 ),
-              )
-              .toList()),
+                onTap: () {
+                  navButton.onPressed();
+                },
+              ),
+            )
+            .toList(),
+      ),
     );
   }
   return null;
@@ -141,5 +142,12 @@ List<NavButtonData> navButtons = [
         'mailto:welchizm+goodwelchi@gmail.com',
       );
     },
+  ),
+];
+
+List<ExternalLinkData> links = [
+  ExternalLinkData(
+    assetPath: 'assets/images/Twitter_Logo_Blue.png',
+    url: 'https://twitter.com/welchi_',
   ),
 ];
