@@ -4,6 +4,7 @@ import 'package:goodwelchi/model/model.dart';
 import 'package:goodwelchi/page/about_page.dart';
 import 'package:goodwelchi/page/works_page.dart';
 import 'package:goodwelchi/routes/routes.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
   return AppBar(
@@ -68,6 +69,10 @@ List<NavButtonData> navButtons = [
   ),
   NavButtonData(
     title: 'Contact',
-    onPressed: () {},
+    onPressed: () {
+      launch(
+        'mailto:welchizm+goodwelchi@gmail.com',
+      );
+    },
   ),
 ];
