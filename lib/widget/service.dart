@@ -43,7 +43,16 @@ class Service extends StatelessWidget {
     }
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: const [],
+      children: _serviceContents
+          .map(
+            (service) => _ServiceContent(
+              title: service.title,
+              assetPath: service.assetPath,
+              description: service.description,
+              width: 200,
+            ),
+          )
+          .toList(),
     );
   }
 }
