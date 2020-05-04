@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:goodwelchi/page/about_page.dart';
 import 'package:goodwelchi/page/page.dart';
+import 'package:goodwelchi/page/works_page.dart';
 import 'package:goodwelchi/routes/routes.dart';
 import 'package:goodwelchi/util/util.dart';
 
@@ -25,6 +26,7 @@ class GoodWelchi extends StatelessWidget {
       routes: {
         TopPage.routeName: (context) => TopPage(),
         AboutPage.routeName: (context) => AboutPage(),
+        WorksPage.routeName: (context) => WorksPage(),
       },
     );
   }
