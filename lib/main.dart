@@ -38,7 +38,7 @@ class TopPage extends StatelessWidget {
 //      body: LargePage(),
       body: ResponsiveLayout(
         largeWidget: LargePage(),
-        smallWidget: const Text('Small'),
+        smallWidget: SmallPage(),
       ),
     );
   }
