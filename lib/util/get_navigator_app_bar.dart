@@ -9,15 +9,6 @@ import 'package:goodwelchi/util/util.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
-  if (ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile) {
-    return AppBar();
-  }
-  return getTextNavigatorBar(context);
-}
-
-PreferredSizeWidget getTextNavigatorBar(
-  BuildContext context,
-) {
   return AppBar(
     leading: SizedBox(
       height: 60,
@@ -31,26 +22,28 @@ PreferredSizeWidget getTextNavigatorBar(
       style: Theme.of(context).textTheme.headline2,
       maxLines: 1,
     ),
-    actions: navButtons
-        .map(
-          (buttonData) => Center(
-            child: Padding(
-              padding: const EdgeInsets.only(
-                left: 32,
-              ),
-              child: GestureDetector(
-                onTap: () {
-                  buttonData.onPressed();
-                },
-                child: Text(
-                  buttonData.title,
-                  style: Theme.of(context).textTheme.subtitle1,
+    actions: ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile
+        ? null
+        : navButtons
+            .map(
+              (buttonData) => Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    left: 32,
+                  ),
+                  child: GestureDetector(
+                    onTap: () {
+                      buttonData.onPressed();
+                    },
+                    child: Text(
+                      buttonData.title,
+                      style: Theme.of(context).textTheme.subtitle1,
+                    ),
+                  ),
                 ),
               ),
-            ),
-          ),
-        )
-        .toList(),
+            )
+            .toList(),
   );
 }
 
