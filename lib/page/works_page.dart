@@ -8,6 +8,7 @@ class WorksPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: getNavigatorAppBar(context),
+      endDrawer: getNavigatorDrawer(context),
       body: GridView.count(
         crossAxisCount: 3,
         children: works
