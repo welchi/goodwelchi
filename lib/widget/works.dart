@@ -57,7 +57,7 @@ class WorksGridView extends StatelessWidget {
 
   int getCrossAxisCount() {
     if (deviceSize == DeviceSize.mobile) {
-      return 1;
+      return 2;
     }
     return 3;
   }
