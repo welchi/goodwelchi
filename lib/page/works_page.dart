@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:goodwelchi/util/util.dart';
 import 'package:goodwelchi/widget/widget.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class WorksPage extends StatelessWidget {
   static String routeName = 'works';
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: getNavigatorAppBar(context),
@@ -18,40 +18,7 @@ class WorksPage extends StatelessWidget {
                 ),
                 child: InkWell(
                   onTap: () {
-                    showDialog<void>(
-                      context: context,
-                      builder: (_) {
-                        return AlertDialog(
-                          title: Text(
-                            work.title,
-                          ),
-                          content: SingleChildScrollView(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Image.asset(
-                                  work.imgPath,
-                                ),
-                                Text(
-                                  work.description,
-                                ),
-                                InkWell(
-                                  onTap: () {
-                                    launch(
-                                      work.url,
-                                    );
-                                  },
-                                  child: Text(
-                                    work.url,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        );
-                      },
-                    );
+                    showGridDetail(work, context);
                   },
                   child: Card(
                     child: SizedBox(
