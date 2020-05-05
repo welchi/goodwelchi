@@ -9,6 +9,33 @@ import 'package:goodwelchi/util/util.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 PreferredSizeWidget getNavigatorAppBar(BuildContext context) {
+  if (ResponsiveLayout.getDeviceSize(context) == DeviceSize.mobile) {
+    return getSmallAppBar(context);
+  }
+  return getLargeAppBar(context);
+}
+
+PreferredSizeWidget getSmallAppBar(BuildContext context) {
+  return AppBar(
+    iconTheme: IconThemeData(
+      color: Colors.black,
+    ),
+    leading: SizedBox(
+      height: 60,
+      width: 60,
+      child: Image.asset(
+        'assets/images/logo.png',
+      ),
+    ),
+    title: AutoSizeText(
+      'GoodWelchi',
+      style: Theme.of(context).textTheme.headline2,
+      maxLines: 1,
+    ),
+  );
+}
+
+PreferredSizeWidget getLargeAppBar(BuildContext context) {
   return AppBar(
     iconTheme: IconThemeData(
       color: Colors.black,
