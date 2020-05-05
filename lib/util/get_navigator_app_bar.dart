@@ -20,18 +20,7 @@ PreferredSizeWidget getSmallAppBar(BuildContext context) {
     iconTheme: IconThemeData(
       color: Colors.black,
     ),
-    leading: GestureDetector(
-      onTap: () {
-        navButtons[0].onPressed();
-      },
-      child: SizedBox(
-        height: 60,
-        width: 60,
-        child: Image.asset(
-          'assets/images/logo.png',
-        ),
-      ),
-    ),
+    leading: getAppBarLogo(),
     title: getAppBarTitle(context),
   );
 }
@@ -41,13 +30,7 @@ PreferredSizeWidget getLargeAppBar(BuildContext context) {
     iconTheme: IconThemeData(
       color: Colors.black,
     ),
-    leading: SizedBox(
-      height: 60,
-      width: 60,
-      child: Image.asset(
-        'assets/images/logo.png',
-      ),
-    ),
+    leading: getAppBarLogo(),
     title: getAppBarTitle(context),
     actions: links
         .map(
@@ -110,6 +93,21 @@ Widget getAppBarTitle(BuildContext context) {
       'GoodWelchi',
       style: Theme.of(context).textTheme.headline2,
       maxLines: 1,
+    ),
+  );
+}
+
+Widget getAppBarLogo() {
+  return GestureDetector(
+    onTap: () {
+      navButtons[0].onPressed();
+    },
+    child: SizedBox(
+      height: 60,
+      width: 60,
+      child: Image.asset(
+        'assets/images/logo.png',
+      ),
     ),
   );
 }
