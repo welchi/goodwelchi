@@ -52,10 +52,15 @@ PreferredSizeWidget getLargeAppBar(BuildContext context) {
         'assets/images/logo.png',
       ),
     ),
-    title: AutoSizeText(
-      'GoodWelchi',
-      style: Theme.of(context).textTheme.headline2,
-      maxLines: 1,
+    title: GestureDetector(
+      onTap: () {
+        navButtons[0].onPressed();
+      },
+      child: AutoSizeText(
+        'GoodWelchi',
+        style: Theme.of(context).textTheme.headline2,
+        maxLines: 1,
+      ),
     ),
     actions: links
         .map(
