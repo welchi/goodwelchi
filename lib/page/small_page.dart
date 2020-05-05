@@ -29,6 +29,20 @@ class SmallPage extends StatelessWidget {
           const WorksGridView(
             deviceSize: DeviceSize.mobile,
           ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                const Padding(
+                  padding: EdgeInsets.all(
+                    16,
+                  ),
+                  child: Text(
+                    '©︎2020 GoodWelchi',
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
