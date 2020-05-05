@@ -28,20 +28,24 @@ class Service extends StatelessWidget {
 
   Widget getContents(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    // for mobile
     if (deviceSize == DeviceSize.mobile) {
       return Column(
-        children: _serviceContents
-            .map(
-              (service) => _ServiceContent(
-                title: service.title,
-                assetPath: service.assetPath,
-                description: service.description,
-                width: size.width,
-              ),
-            )
-            .toList(),
+        children: [
+          ..._serviceContents
+              .map(
+                (service) => _ServiceContent(
+                  title: service.title,
+                  assetPath: service.assetPath,
+                  description: service.description,
+                  width: size.width,
+                ),
+              )
+              .toList(),
+        ],
       );
     }
+    // for PC
     return Column(
       children: <Widget>[
         Row(
@@ -107,10 +111,14 @@ class _ServiceContent extends StatelessWidget {
               ),
             ),
           ),
-//          Text(
-//            description,
-//            style: Theme.of(context).textTheme.subtitle1,
-//          ),
+          width > 200
+              ? Center(
+                  child: Text(
+                    description,
+                    style: Theme.of(context).textTheme.subtitle1,
+                  ),
+                )
+              : SizedBox()
         ],
       ),
     );
