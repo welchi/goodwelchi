@@ -29,13 +29,13 @@ class SmallPage extends StatelessWidget {
           const WorksGridView(
             deviceSize: DeviceSize.mobile,
           ),
-          SliverList(
-            delegate: SliverChildListDelegate(
-              [
-                getCopyright(),
-              ],
-            ),
-          ),
+//          SliverList(
+//            delegate: SliverChildListDelegate(
+//              [
+//                getCopyright(),
+//              ],
+//            ),
+//          ),
         ],
       ),
     );
