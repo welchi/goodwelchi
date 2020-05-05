@@ -28,6 +28,13 @@ class LargePage extends StatelessWidget {
           const WorksGridView(
             deviceSize: DeviceSize.pc,
           ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                getCopyright(),
+              ],
+            ),
+          ),
         ],
       ),
     );
