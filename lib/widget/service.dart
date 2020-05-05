@@ -113,12 +113,15 @@ class _ServiceContent extends StatelessWidget {
           ),
           width > 200
               ? Center(
-                  child: Text(
-                    description,
-                    style: Theme.of(context).textTheme.subtitle1,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Text(
+                      description,
+                      style: Theme.of(context).textTheme.subtitle1,
+                    ),
                   ),
                 )
-              : SizedBox()
+              : const SizedBox()
         ],
       ),
     );
@@ -129,16 +132,16 @@ List<ServiceContentData> _serviceContents = const [
   ServiceContentData(
     title: 'Development',
     assetPath: 'assets/images/development.png',
-    description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+    description: 'アプリ・Web・ゲームまで、幅広く開発いたします。お客様の信頼第一に、セキュアで安定したシステムを組み上げます。',
   ),
   ServiceContentData(
     title: 'Illustration',
     assetPath: 'assets/images/illustration.png',
-    description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+    description: 'お客様の要望を丁寧にヒアリング。あなたが望むイメージを、専門的な視点から具体化して描き上げます。また、漫画も得意です。',
   ),
   ServiceContentData(
     title: 'Design',
     assetPath: 'assets/images/design.png',
-    description: 'ここに概要を入れる、、、、、、、、、、、、、、、、、、、、、、、、、',
+    description: 'デザイナーと提携しているから大丈夫。お客様の要望に添える、シンプルなデザインを仕上げます。',
   ),
 ];
