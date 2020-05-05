@@ -32,18 +32,7 @@ PreferredSizeWidget getLargeAppBar(BuildContext context) {
     ),
     leading: getAppBarLogo(),
     title: getAppBarTitle(context),
-    actions: links
-        .map(
-          (link) => IconButton(
-            icon: Image.asset(
-              link.assetPath,
-            ),
-            onPressed: () => launch(
-              link.url,
-            ),
-          ),
-        )
-        .toList(),
+    actions: getExternalLinkIcons(),
     bottom: PreferredSize(
       preferredSize: const Size.fromHeight(
         48,
@@ -151,6 +140,21 @@ Widget getNavigatorDrawer(BuildContext context) {
     );
   }
   return null;
+}
+
+List<Widget> getExternalLinkIcons() {
+  return links
+      .map(
+        (link) => IconButton(
+          icon: Image.asset(
+            link.assetPath,
+          ),
+          onPressed: () => launch(
+            link.url,
+          ),
+        ),
+      )
+      .toList();
 }
 
 List<NavButtonData> navButtons = [
