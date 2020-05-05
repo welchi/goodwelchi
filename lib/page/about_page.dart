@@ -43,6 +43,11 @@ class AboutPage extends StatelessWidget {
               ),
             ],
           ),
+          Row(
+            children: <Widget>[
+              getCopyright(),
+            ],
+          ),
         ],
       ),
     );
@@ -63,6 +68,11 @@ class AboutPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8),
             child: getWelchiAbout(context),
+          ),
+          Row(
+            children: <Widget>[
+              getCopyright(),
+            ],
           ),
         ],
       ),
