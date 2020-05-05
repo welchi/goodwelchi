@@ -32,14 +32,7 @@ class SmallPage extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                const Padding(
-                  padding: EdgeInsets.all(
-                    16,
-                  ),
-                  child: Text(
-                    '©︎2020 GoodWelchi',
-                  ),
-                ),
+                getCopyright(),
               ],
             ),
           ),
