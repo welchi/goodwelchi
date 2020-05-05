@@ -20,11 +20,16 @@ PreferredSizeWidget getSmallAppBar(BuildContext context) {
     iconTheme: IconThemeData(
       color: Colors.black,
     ),
-    leading: SizedBox(
-      height: 60,
-      width: 60,
-      child: Image.asset(
-        'assets/images/logo.png',
+    leading: GestureDetector(
+      onTap: () {
+        navButtons[0].onPressed();
+      },
+      child: SizedBox(
+        height: 60,
+        width: 60,
+        child: Image.asset(
+          'assets/images/logo.png',
+        ),
       ),
     ),
     title: getAppBarTitle(context),
