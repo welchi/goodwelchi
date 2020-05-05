@@ -109,18 +109,7 @@ Widget getNavigatorDrawer(BuildContext context) {
         children: [
           ListTile(
             title: Row(
-              children: links
-                  .map(
-                    (link) => IconButton(
-                      icon: Image.asset(
-                        link.assetPath,
-                      ),
-                      onPressed: () => launch(
-                        link.url,
-                      ),
-                    ),
-                  )
-                  .toList(),
+              children: getExternalLinkIcons(),
             ),
           ),
           ...navButtons
