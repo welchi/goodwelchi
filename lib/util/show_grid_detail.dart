@@ -34,6 +34,7 @@ void showGridDetail(
                   work.url,
                   style: Theme.of(context).textTheme.button.copyWith(
                         decoration: TextDecoration.underline,
+                        color: Colors.blue,
                       ),
                 ),
               ),
