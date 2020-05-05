@@ -109,18 +109,36 @@ Widget getNavigatorDrawer(BuildContext context) {
     return Drawer(
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        children: navButtons
-            .map(
-              (navButton) => ListTile(
-                title: Text(
-                  navButton.title,
+        children: [
+          ListTile(
+            title: Row(
+              children: links
+                  .map(
+                    (link) => IconButton(
+                      icon: Image.asset(
+                        link.assetPath,
+                      ),
+                      onPressed: () => launch(
+                        link.url,
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ),
+          ...navButtons
+              .map(
+                (navButton) => ListTile(
+                  title: Text(
+                    navButton.title,
+                  ),
+                  onTap: () {
+                    navButton.onPressed();
+                  },
                 ),
-                onTap: () {
-                  navButton.onPressed();
-                },
-              ),
-            )
-            .toList(),
+              )
+              .toList(),
+        ],
       ),
     );
   }
