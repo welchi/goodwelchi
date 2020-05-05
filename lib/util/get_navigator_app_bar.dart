@@ -27,16 +27,7 @@ PreferredSizeWidget getSmallAppBar(BuildContext context) {
         'assets/images/logo.png',
       ),
     ),
-    title: GestureDetector(
-      onTap: () {
-        navButtons[0].onPressed();
-      },
-      child: AutoSizeText(
-        'GoodWelchi',
-        style: Theme.of(context).textTheme.headline2,
-        maxLines: 1,
-      ),
-    ),
+    title: getAppBarTitle(context),
   );
 }
 
@@ -52,16 +43,7 @@ PreferredSizeWidget getLargeAppBar(BuildContext context) {
         'assets/images/logo.png',
       ),
     ),
-    title: GestureDetector(
-      onTap: () {
-        navButtons[0].onPressed();
-      },
-      child: AutoSizeText(
-        'GoodWelchi',
-        style: Theme.of(context).textTheme.headline2,
-        maxLines: 1,
-      ),
-    ),
+    title: getAppBarTitle(context),
     actions: links
         .map(
           (link) => IconButton(
@@ -110,6 +92,19 @@ PreferredSizeWidget getLargeAppBar(BuildContext context) {
           ),
         ),
       ),
+    ),
+  );
+}
+
+Widget getAppBarTitle(BuildContext context) {
+  return GestureDetector(
+    onTap: () {
+      navButtons[0].onPressed();
+    },
+    child: AutoSizeText(
+      'GoodWelchi',
+      style: Theme.of(context).textTheme.headline2,
+      maxLines: 1,
     ),
   );
 }
